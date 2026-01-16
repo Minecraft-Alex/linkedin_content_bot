@@ -1,0 +1,32 @@
+sources:
+  - url: https://ai.googleblog.com/
+    name: Google AI Blog
+  - url: https://aws.amazon.com/blogs/machine-learning/
+    name: AWS Machine Learning Blog
+  - url: https://blogs.microsoft.com/ai-for-business/
+    name: Microsoft AI Blog
+  - url: https://engineering.fb.com/category/ai-ml/
+    name: Meta AI Blog
+  - url: https://machinelearning.apple.com/
+    name: Apple Machine Learning Blog
+  - url: https://blogs.nvidia.com/blog/category/deep-learning/
+    name: NVIDIA Blog
+  - url: https://www.ibm.com/blog/collection/ai-perspectives/
+    name: IBM AI Blog
+
+keywords:
+  - artificial intelligence
+  - machine learning
+  - data science
+  - deep learning
+  - neural networks
+  - computer vision
+  - natural language processing
+
+template: |
+  🤖 AI News Alert: {title}
+  
+  {summary}
+  
+  #AI #MachineLearning #TechNews
+  Read more: {url}

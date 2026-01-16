@@ -1,0 +1,88 @@
+scraping:
+  topics:
+    - "artificial intelligence"
+    - "machine learning"
+    - "data science"
+    - "deep learning"
+    - "neural networks"
+    - "computer vision"
+    - "natural language processing"
+  sources:
+    - "https://techcrunch.com/category/artificial-intelligence/"
+    - "https://venturebeat.com/category/ai/"
+    - "https://www.theverge.com/ai-artificial-intelligence"
+    - "https://www.wired.com/tag/artificial-intelligence/"
+    - "https://www.zdnet.com/topic/artificial-intelligence/"
+  max_articles_per_source: 5
+
+content_sources:
+  enabled:
+    - news_api
+    - google_news
+    - rss
+    # Future sources:
+    # - medium
+    # - devto
+
+sources:
+  news_api:
+    enabled: true
+    api_key: "8e6727029a2a4b4cbf1cd955665209b3"
+    query: "artificial intelligence OR machine learning OR AI OR deep learning OR neural networks OR computer vision OR natural language processing"
+    max_articles: 15
+    language: en
+    sort_by: publishedAt
+
+  google_news:
+    enabled: true
+    topics:
+      - artificial intelligence
+      - machine learning
+      - AI research
+      - deep learning
+      - neural networks
+    max_articles: 50
+
+  rss:
+    enabled: true
+    feeds:
+      - https://arxiv.org/rss/cs.AI
+      - https://arxiv.org/rss/cs.LG
+      - https://machinelearningmastery.com/feed/
+      - https://openai.com/blog/rss/
+      - https://blogs.nvidia.com/feed/
+    max_articles: 20
+
+filtering:
+  min_word_count: 100
+  min_relevance_score: 1.0
+  max_articles: 3
+  keywords:
+    - AI
+    - ML
+    - artificial intelligence
+    - machine learning
+    - deep learning
+    - neural
+    - GPT
+    - LLM
+    - transformer
+    - computer vision
+    - NLP
+    - data science
+    - robotics
+    - automation
+
+posting:
+  template: |
+    {title}
+
+    {summary}
+
+    Read more: {url}
+
+    #AI #MachineLearning #TechNews #{topic_hashtag}
+    via {source}
+
+linkedin:
+  post_interval: 0  # Post immediately
